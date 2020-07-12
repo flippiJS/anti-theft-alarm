@@ -1,0 +1,77 @@
+<ion-content class="bkg" fullscreen>
+
+  <!--
+  <ion-img src="./assets/auth_images/login.jpg"></ion-img>
+
+  <ion-card class="card">
+    <ion-card-header class="ion-text-center">
+      <ion-card-subtitle>Tu seguridad ante todo</ion-card-subtitle>
+      <ion-card-title>Alarma antirobo</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="card-content">
+      <section class="ion-text-center">
+        <header>Acceso rápido</header>
+        <ion-button size="small" (click)="usuario('admin', 1111)" color="danger">Admin</ion-button>
+        <ion-button size="small" (click)="usuario('invitado', 2222)" color="danger">Invitado</ion-button>
+        <ion-button size="small" (click)="usuario('usuario', 3333)" color="danger">Usuario</ion-button>
+        <ion-button size="small" (click)="usuario('anonimo', 4444)" color="danger">Anonimo</ion-button>
+        <ion-button size="small" (click)="usuario('tester', 5555)" color="danger">Tester</ion-button>
+      </section>
+      <form #f="ngForm" [formGroup]="loginForm" class="ion-padding">
+        <div class="mb-2">
+          <input class="input" type="email" name="name" placeholder="Correo" formControlName="email" />
+        </div>
+        <div class="mb-2">
+          <input class="input" type="password" name="password" placeholder="Contraseña" formControlName="password" />
+        </div>
+      </form>
+    </ion-card-content>
+
+
+    <button expand="block" class="ion-padding btn" (click)="logIn()">
+      Iniciar sesión
+      <ion-ripple-effect></ion-ripple-effect>
+    </button>
+
+  </ion-card>-->
+
+  <div class="login-card">
+    <div class="login-card-content">
+      <div class="header">
+        <div class="logo">
+          <ion-img src="./assets/auth_images/login.jpg"></ion-img>
+        </div>
+        <h2>Alarma<span class="highlight">antirobo</span></h2>
+        <h3>Tu seguridad ante todo</h3>
+      </div>
+      <form #f="ngForm" [formGroup]="loginForm" class="ion-padding">
+      <div class="form">
+        <div class="form-field username">
+          <input class="input" type="email" name="name" placeholder="Correo" formControlName="email" />
+        </div>
+        <div class="form-field password">
+          <input class="input" type="password" name="password" placeholder="Contraseña" formControlName="password" />
+        </div>
+
+        <button (click)="logIn()" type="submit">
+          Ingresar
+        </button>
+        <div>
+          <section class="ion-text-center">
+            <header>Acceso rápido</header>
+            <ion-button size="small" (click)="usuario('admin', 1111)" color="danger">Admin</ion-button>
+            <ion-button size="small" (click)="usuario('invitado', 2222)" color="danger">Invitado</ion-button>
+            <ion-button size="small" (click)="usuario('usuario', 3333)" color="danger">Usuario</ion-button>
+            <ion-button size="small" (click)="usuario('anonimo', 4444)" color="danger">Anonimo</ion-button>
+            <ion-button size="small" (click)="usuario('tester', 5555)" color="danger">Tester</ion-button>
+          </section>
+        </div>
+      </div>
+      </form>
+    </div>
+    <div class="login-card-footer">
+      <span>Olvide mi contraseña</span>
+    </div>
+  </div>
+</ion-content>

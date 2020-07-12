@@ -1,0 +1,7 @@
+{
+  "name": "anti-theft-alarm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

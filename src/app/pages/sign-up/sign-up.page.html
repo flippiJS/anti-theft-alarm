@@ -1,0 +1,49 @@
+<ion-content fullscreen>
+
+  <!-- -------------------------------- Image -------------------------------- -->
+  <ion-img src="./assets/auth_images/sign-up.jpg"></ion-img>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-subtitle>Crear cuenta</ion-card-subtitle>
+      <ion-card-title>Ingresá tus datos.</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="card-content">
+      <b>ALERTA:</b> Debido a la gran demanda, puede haber demora en los turnos!
+      <form #f="ngForm" [formGroup]="signupForm" class="ion-padding">
+        <div class="mb-2">
+          <input class="input" placeholder="Nombre" formControlName="firstName" />
+        </div>
+        <div class="mb-2">
+          <input class="input" placeholder="Apellido" formControlName="lastName" />
+        </div>
+        <div class="mb-2">
+          <input class="input" type="email" placeholder="Correo" formControlName="email" />
+        </div>
+        <div class="mb-2">
+          <input class="input" type="password" name="password" placeholder="Contraseña" formControlName="password" />
+        </div>
+        <!--         <div class="mb-2">
+          <ngx-intl-tel-input class="phoneInput" [preferredCountries]="preferredCountries"
+            [enableAutoCountrySelect]="false" [enablePlaceholder]="true" [searchCountryFlag]="true"
+            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" [selectFirstCountry]="false"
+            [selectedCountryISO]="CountryISO.UnitedStates" [maxLength]="10" [tooltipField]="TooltipLabel.Name"
+            [phoneValidation]="true" [separateDialCode]="separateDialCode" name="phone" formControlName="phone">
+          </ngx-intl-tel-input>
+        </div> -->
+
+      </form>
+    </ion-card-content>
+    <button expand="block" [disabled]="project?.name === 'N/A'" class="ion-padding btn" (click)="submit()">
+      Crear cuenta
+      <ion-ripple-effect></ion-ripple-effect>
+    </button>
+
+    <button expand="block" class="ion-padding sign-up-btn" (click)="logIn()">
+      Inicar sesión
+      <ion-ripple-effect></ion-ripple-effect>
+    </button>
+
+  </ion-card>
+</ion-content>

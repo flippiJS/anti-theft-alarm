@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">
+      Alarma antirobo
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-icon (click)="logOut()" slot="end" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <ion-img src="./assets/auth_images/login.jpg"></ion-img>
+    <ion-card-header class="ion-text-center ion-padding d-block">
+      <ion-card-subtitle>Estado de la alarma</ion-card-subtitle>
+      <ion-card-title [hidden]="showBar">{{activated ? 'Activada' : 'Desactivada'}}</ion-card-title>
+      <ion-progress-bar color="danger" *ngIf="showBar" type="indeterminate"></ion-progress-bar>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button size="large" [disabled]="showBar" color="danger" expand="block" (click)="this.changeState()">
+        {{activated ? 'Desactivar' : 'Activar'}}
+      </ion-button>
+
+      <ion-label class="d-block ion-margin-top">
+        <ion-badge color="danger">Atención</ion-badge> Recordá que para desactivar la alarma deberás ingresar tu clave
+        personal. Caso contrario tu teléfono quedará inutilizado.
+      </ion-label>
+      
+      <ion-label class="d-block ion-margin-top">
+        La empresa no se responsabiliza por los daños causado en su dispositivo.
+      </ion-label>
+
+      <ion-label class="d-block ion-margin-top">
+        Gracias por confiar en nosotros.
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
